@@ -1,12 +1,15 @@
+---
+tags: [ "Azure Pipelines", "Azure DevOps", "NuGet" ]
+---
+
 # Pipeline for NuGet package
 
-This Azure DevOps build pipeline will build a .NET Core/Standard project and publish the generated nupkg file as an artifact.
+This Azure DevOps build pipeline will build a .NET Core/Standard project and create two NuGet packages. A prerelease and release version. The packages are published as an artifact of the build.
 
-Make sure you add all the necessary settings in the csproj and also add `<GeneratePackageOnBuild>true</GeneratePackageOnBuild>` to generate the NuGet package during the build.
+## Project file
+If you have a `Version` element in your csproj then change in into `VersionPrefix`. This will allow for the build pipeline to add a suffix for the prerelease package. (`VersionSuffix` can be left empty.)
 
-In the build step the output folder is `$(Build.ArtifactStagingDirectory)`. This will make sure no other nupkg files (e.g. from dependencies) are in the result.
-
-If you generate the nupkg in another folder and want to copy it you might also copy the folder structure. Use the `flattenFolders` setting to prevent this.
+## Build pipeline
 
 ```yaml
 # ASP.NET Core (.NET Framework)
@@ -24,9 +27,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreInstaller@0
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk'
   inputs:
-    version: '2.2.x'
+    packageType: sdk
+    version: 2.2.x
+    installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - task: DotNetCoreCLI@2
   displayName: "NuGet Restore"
@@ -39,17 +45,28 @@ steps:
   inputs:
     command: build
     projects: '**/*.csproj'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--configuration $(buildConfiguration)'
 
-- task: CopyFiles@2
-  displayName: 'Copy NuGet Package'
+- task: DotNetCoreCLI@2
+  displayName: 'Create NuGet Package - Prerelease Version'
   inputs:
-    SourceFolder: '$(Build.ArtifactStagingDirectory)'
-    Contents: '*.nupkg'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/Package'
+    command: pack
+    buildProperties: 'VersionSuffix="$(Build.SourceVersion)"'
+    packDirectory: '$(Build.ArtifactStagingDirectory)/packages/prereleases'
+    arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Create NuGet Package - Release Version'
+  inputs:
+    command: pack
+    packDirectory: '$(Build.ArtifactStagingDirectory)/packages/releases'
+    arguments: '--configuration $(buildConfiguration)'
+    nobuild: true
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/Package'
+    artifactName: 'FluentAssertions.ArgumentMatchers.Moq'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/packages'
+
 ```
