@@ -1,3 +1,7 @@
+---
+tags: [ "SonarQube", "Code Coverage" ]
+---
+
 # Exclude project from code coverage in SonarQube
 
 To exclude a project from code coverage in SonarQube add the following XML to the *.csproj.

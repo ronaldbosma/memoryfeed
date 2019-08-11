@@ -1,3 +1,7 @@
+---
+tags: [ "Test", "Testing" ]
+---
+
 # Test Ideeën
 
 Email weergave (html vs tekst)

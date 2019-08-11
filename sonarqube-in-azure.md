@@ -1,5 +1,10 @@
-How to run SonarQube in Azure DevOps using an Azure Container instance: https://www.azuredevopslabs.com/labs/vstsextend/sonarqube/.
+---
+tags: [ "Azure", "Azure DevOps", "SonarQube" ]
+---
 
+# Host SonarQube in Azure
+
+How to use SonarQube in Azure DevOps using an Azure Container instance to host SonarQube: https://www.azuredevopslabs.com/labs/vstsextend/sonarqube/.
 
 - Start Cloud Shell in Azure Portal with Bash.
 - Create Resource Group:
