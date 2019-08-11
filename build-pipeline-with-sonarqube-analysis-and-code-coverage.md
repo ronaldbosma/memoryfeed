@@ -3,8 +3,10 @@
 An example of a Azure DevOps build pipeline for .NET Core projects. Also works for .NET Standard projects.  
 It performs SonarQube analysis and measures code coverage.
 
+For SonarQube to work the projects need to have a `<ProjectGuid>` element in the csproj with a unique id.
+
 Replace `<your-project-key>` with the SonarQube project key you want to use.  
-You might also want to change the version of DotNetCoreInstaller depending on you .NET Core version
+You might also want to change the version of DotNetCoreInstaller depending on you .NET Core version.
 
 ```yaml
 # ASP.NET Core (.NET Framework)
