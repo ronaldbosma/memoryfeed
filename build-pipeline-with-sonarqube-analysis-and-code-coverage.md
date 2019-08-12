@@ -9,6 +9,8 @@ It performs SonarQube analysis and measures code coverage.
 
 For SonarQube to work the projects need to have a `<ProjectGuid>` element in the csproj with a unique id.
 
+For code coverage to work you'll need to coverlet to the test projects. Use: `Install-Package coverlet.msbuild`.
+
 Replace `<your-project-key>` with the SonarQube project key you want to use.  
 You might also want to change the version of DotNetCoreInstaller depending on you .NET Core version.
 
