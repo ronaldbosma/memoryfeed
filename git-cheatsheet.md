@@ -4,6 +4,9 @@ tags: [ "Git" ]
 
 # Git Cheatsheet
 
+### List local/unpushed commits
+`git log origin/master..HEAD`
+
 ### Clone repository with submodules
 `git clone --recurse-submodules <repository>`
 
