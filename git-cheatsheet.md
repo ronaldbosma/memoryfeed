@@ -15,3 +15,6 @@ tags: [ "Git" ]
 
 ### Cleanup unnecessary files and optimize the local repository
 `git gc`
+
+### Set email address
+`git config --global user.email "email@example.com"`
