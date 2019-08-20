@@ -7,6 +7,17 @@ tags: [ "Git" ]
 ### List local/unpushed commits
 `git log origin/master..HEAD`
 
+### Undo uncommited local changes
+
+#### Stash
+`git stash`
+
+#### Discarding local changes (permanently) to a file
+`git checkout -- <file>`
+
+#### Undo changes permanently
+`git reset --hard`
+
 ### Clone repository with submodules
 `git clone --recurse-submodules <repository>`
 
