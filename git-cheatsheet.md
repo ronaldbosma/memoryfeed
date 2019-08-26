@@ -18,8 +18,13 @@ tags: [ "Git" ]
 #### Undo changes permanently
 `git reset --hard`
 
-### Clone repository with submodules
+### Submodules
+
+#### Clone repository with submodules
 `git clone --recurse-submodules <repository>`
+
+#### Update submodules
+`git submodule update --remote --merge`
 
 ### Delete/prune local references to branches
 `git remote prune origin`
