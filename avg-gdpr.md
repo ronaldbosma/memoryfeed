@@ -1,3 +1,7 @@
+---
+tags: [ "AVG", "GDPR" ]
+---
+
 # AVG/GDPR
 
 ## Blog: Een rechtmatig 'kopietje productie'
