@@ -15,32 +15,23 @@
       name: 'MemoryFeed',
       repo: 'https://github.com/ronaldbosma/memoryfeed',
       loadSidebar: true,
-      
-      search: 'auto', // default
-
-      search : [
-        '/build-and-release/azure-devops-cli',
-        '/build-and-release/build-pipeline-with-sonarqube-analysis-and-code-coverage',
-        '/build-and-release/exclude-project-from-code-coverage-in-sonarqube',
-        '/build-and-release/nuget-build-and-release-pipeline',
-        '/build-and-release/nuget-configure-global-package-source-with-credentials',
-        '/build-and-release/sonarqube-in-azure',
-        '/development/git-cheatsheet',
-        '/development/visual-studio-add-start-window-button-to-toolbar',
-        '/development/visual-studio-add-winmerge-with-git',
-        '/other/avg-gdpr',
-        '/other/remove-all-user-folders-from-this-pc-64-bit',
-        '/other/test-ideeen'
-      ],
-
-      // complete configuration parameters
       search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: [], // or 'auto'
-        placeholder: 'Type to search',
-        noData: 'No Results!',
+        paths: [
+          '/build-and-release/azure-devops-cli',
+          '/build-and-release/build-pipeline-with-sonarqube-analysis-and-code-coverage',
+          '/build-and-release/exclude-project-from-code-coverage-in-sonarqube',
+          '/build-and-release/nuget-build-and-release-pipeline',
+          '/build-and-release/nuget-configure-global-package-source-with-credentials',
+          '/build-and-release/sonarqube-in-azure',
+          '/development/git-cheatsheet',
+          '/development/visual-studio-add-start-window-button-to-toolbar',
+          '/development/visual-studio-add-winmerge-with-git',
+          '/other/avg-gdpr',
+          '/other/remove-all-user-folders-from-this-pc-64-bit',
+          '/other/test-ideeen'
+        ],
         // Headline depth, 1 - 6
-        depth: 6,
+        depth: 2,
         hideOtherSidebarContent: false, // whether or not to hide other sidebar content
         // To avoid search index collision
         // between multiple websites under the same domain
