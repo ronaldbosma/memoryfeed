@@ -1,7 +1,3 @@
----
-tags: [ "Azure DevOps CLI", "Azure DevOps", "Azure CLI" ]
----
-
 # Azure DevOps CLI
 
 Download Azure CLI from https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest and install it.

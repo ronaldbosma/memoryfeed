@@ -1,7 +1,3 @@
----
-tags: [ "Azure", "Azure DevOps", "SonarQube" ]
----
-
 # Host SonarQube in Azure
 
 How to use SonarQube in Azure DevOps using an Azure Container instance to host SonarQube: https://www.azuredevopslabs.com/labs/vstsextend/sonarqube/.

@@ -1,7 +1,3 @@
----
-tags: [ "Azure Pipelines", "Azure DevOps", "SonarQube", "Code Coverage" ]
----
-
 # Build pipeline with SonarQube analysis and code coverage
 
 An example of a Azure DevOps build pipeline for .NET Core projects. Also works for .NET Standard projects.  

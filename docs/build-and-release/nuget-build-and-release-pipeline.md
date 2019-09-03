@@ -1,7 +1,3 @@
----
-tags: [ "Azure Pipelines", "Azure DevOps", "NuGet" ]
----
-
 # Pipeline for NuGet package
 
 This Azure DevOps build pipeline will build a .NET Core/Standard project and create two NuGet packages. A prerelease and release version. The packages are published as an artifact of the build.

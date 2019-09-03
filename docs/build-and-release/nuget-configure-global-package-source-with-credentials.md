@@ -1,7 +1,3 @@
----
-tags: [ "NuGet" ]
----
-
 # Configure global NuGet package source with username and password
 
 You can register a global NuGet package source by adding it to a common NuGet.config. E.g. %appdata%\NuGet\NuGet.Config.

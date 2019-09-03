@@ -1,7 +1,3 @@
----
-tags: [ "Git" ]
----
-
 # Git Cheatsheet
 
 ### List local/unpushed commits

@@ -1,7 +1,3 @@
----
-tags: [ "Windows Explorer", "Folder" ]
----
-
 # Remove all users folders from This PC
 
 If you want to remove users folders like Desktop, Downloads, etc. from This PC in the Windows Explorer, create .reg file with the following content and double click on the .reg file.
