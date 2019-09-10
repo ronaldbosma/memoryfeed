@@ -1,6 +1,6 @@
 # Setup WinMerge in Visual Studio 2019 with Git
 
-Add the following to the .gitconfig in you user folder (%userprofile%\.gitconfig).
+Add the following to the .gitconfig in you user folder: `%userprofile%\.gitconfig`.
 
 ```
 [diff]
