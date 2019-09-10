@@ -10,4 +10,4 @@ To exclude a project from code coverage in SonarQube add the following XML to th
 </ItemGroup>
 ```
 
-Note that excluding projects in a runsettings file doesn't work. The project are excluded when measuring code coverage. However SonarQube will then report 0% code coverage.
+Note that excluding projects in a runsettings file doesn't work. The projects are excluded when measuring code coverage. However SonarQube will then report 0% code coverage on the projects instead of excluding them.
