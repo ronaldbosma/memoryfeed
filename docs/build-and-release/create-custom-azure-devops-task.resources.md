@@ -1,6 +1,11 @@
 # Create custom Azure DevOps task resources
 
+## Create a build or release task
+https://docs.microsoft.com/en-us/azure/devops/extend/develop/add-build-task?view=azure-devops
+
 ## Blog: Creating a Custom Build Task in VSTS (Visual Studio Team Services)
+Example of how to create a custom task that uses a PowerShell script
+
 https://www.andrewhoefling.com/Blog/Post/dev-ops-vsts-custom-build-task-extension
 
 ## Logging
