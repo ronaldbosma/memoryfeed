@@ -19,3 +19,20 @@ If you generate files in a .NET Core (SDK) project, like service agents, the fir
   </ItemGroup>
 </Project>
 ```
+
+
+Comment from https://github.com/dotnet/sdk/issues/1593:
+
+Globs (*.cs) are calculated during evaluation time, in particular during lazy item evaluation. The phases in a build look like this:
+
+```
+1. Evaluation
+1.1 Properties
+1.2 ItemDefinitionGroup
+1.3 Items
+1.3.1 Lazy Items
+1.4 UsingTasks (conditions)
+1.5 Targets (conditions)
+
+2. Run Targets
+```
