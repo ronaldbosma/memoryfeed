@@ -18,5 +18,4 @@ If you generate files in a .NET Core (SDK) project, like service agents, the fir
     <Compile Include="./Generated/agent02.cs" />
   </ItemGroup>
 </Project>
-
 ```
