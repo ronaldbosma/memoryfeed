@@ -15,3 +15,21 @@ http://hauge.cloud/2018/06/22/improving-logs-in-visual-studio-team-services-vsts
 ## Blog: Building Azure DevOps Extension on Azure DevOps – Automated Publish 1
 https://devkimchi.com/2019/07/24/building-azure-devops-extension-on-azure-devops-5/
 
+## Commands
+
+### Install CLI tool:
+```
+npm i -g tfx-cli
+```
+
+### Package extension:
+```
+tfx extension create --manifest-globs vss-extension.json
+```
+
+### Publish extension:
+Replace `<extension-name>` with the name of your extension. Replace `<token>` with a Personal Access Token that can publish to the Marketplace. Replace `<organization>` with the organization you want to share the extension with.
+
+```
+tfx extension publish --json --no-color --service-url https://marketplace.visualstudio.com/ --auth-type pat --token <token> --vsix <extension-name>.vsix --share-with <organization> --debug-log-stream stderr',
+```
