@@ -11,14 +11,16 @@ If you generate files in a .NET Core (SDK) project, like service agents, the fir
 
   <!-- 
     dotnet does a lookup of the files that should be included in the project, before the targets like 'GenerateServiceAgents' are executed.
-    Om ervoor te zorgen dat de agents gecompileerd worden moeten we ze expliciet definieren.
+    To make sure these generated files are compiled they must be defined explicitly.
   -->
   <ItemGroup>
-    <Compile Include="./Generated/agent01.cs" />
-    <Compile Include="./Generated/agent02.cs" />
+    <Compile Include="Generated/agent01.cs" />
+    <Compile Include="Generated/agent02.cs" />
   </ItemGroup>
 </Project>
 ```
+
+Note that a wildcard like `Genenrated/*.cs` does not work.
 
 
 Comment from https://github.com/dotnet/sdk/issues/1593:
