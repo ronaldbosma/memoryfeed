@@ -7,4 +7,6 @@ Email weergave (html vs tekst)
 
 Readonly vs editable
 
-Plaatsen als 's-Gravenhage/Den Haag of Elst GLD
+Adressen:
+- Plaatsen als 's-Gravenhage/Den Haag of Elst GLD
+- Postbus adressen
