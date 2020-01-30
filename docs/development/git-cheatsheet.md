@@ -14,6 +14,16 @@
 #### Undo changes permanently
 `git reset --hard`
 
+### Undo commits
+
+#### Soft undo
+Last commit is reverted and changes are kept as uncommited:  
+`git reset --soft HEAD~1`
+
+#### Hard undo
+Last commit is reverted and changes are lost:  
+`git reset --hard HEAD~1`
+
 ### Submodules
 
 #### Clone repository with submodules
