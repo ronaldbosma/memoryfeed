@@ -24,6 +24,9 @@ Last commit is reverted and changes are kept as uncommited:
 Last commit is reverted and changes are lost:  
 `git reset --hard HEAD~1`
 
+### Copy commits to another branch (cherry pick)
+`git cherry-pick <commit id>`
+
 ### Submodules
 
 #### Clone repository with submodules
