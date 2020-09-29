@@ -5,6 +5,7 @@
 * [Build and Release](./build-and-release/)
 
 * [Development](./development/)
+  * [Entity Framework PowerShell Commands](./development/entity-framework-powershell-commands.md)
   * [Git cheatsheet](./development/git-cheatsheet.md)
   * [NuGet clear cache](./development/nuget-clear-cache.md)
   * [NuGet configure global package source with credentials](./development/nuget-configure-global-package-source-with-credentials.md)
