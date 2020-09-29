@@ -3,6 +3,7 @@
 * [Home](/)
 
 * [Build and Release](./build-and-release/)
+  * [Azure DevOps Build Server Issues](./build-and-release/azure-devops-build-server-issues.md)
   * [Azure DevOps CLI](./build-and-release/azure-devops-cli.md)
   * [Build pipeline with SonarQube analysis and code coverage](./build-and-release/build-pipeline-with-sonarqube-analysis-and-code-coverage.md)
   * [Create custom Azure DevOps task resources](./build-and-release/create-custom-azure-devops-task.resources.md)
