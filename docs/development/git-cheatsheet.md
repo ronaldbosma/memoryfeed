@@ -27,6 +27,11 @@ Last commit is reverted and changes are lost:
 ### Copy commits to another branch (cherry pick)
 `git cherry-pick <commit id>`
 
+### Git clone repository with Personal Access Token
+
+When cloning `https://gitlab.com/username/myrepo.git` with a token, use:  
+`git clone https://<token-name>:<token>@gitlab.com/username/myrepo.git`
+
 ### Submodules
 
 #### Clone repository with submodules
