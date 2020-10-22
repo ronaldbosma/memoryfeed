@@ -43,6 +43,10 @@ When cloning `https://gitlab.com/username/myrepo.git` with a token, use:
 ### Delete/prune local references to branches
 `git remote prune origin`
 
+### Remove untracked files
+Use command without `--dry-run` to actually remove the untracked files  
+`git clean -d -x -f --dry-run`
+
 ### Cleanup unnecessary files and optimize the local repository
 `git gc`
 
