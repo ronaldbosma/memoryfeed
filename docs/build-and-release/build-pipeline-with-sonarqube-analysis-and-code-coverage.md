@@ -1,6 +1,6 @@
 # Build pipeline with SonarQube analysis and code coverage
 
-An example of a Azure DevOps build pipeline for .NET Core projects. Also works for .NET Standard projects.  
+An example of an Azure DevOps build pipeline for .NET Core projects. Also works for .NET Standard projects.  
 It performs SonarQube analysis and measures code coverage.
 
 For SonarQube to work the projects need to have a `<ProjectGuid>` element in the csproj with a unique id.
