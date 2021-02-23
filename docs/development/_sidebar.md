@@ -9,6 +9,7 @@
   * [Git cheatsheet](./development/git-cheatsheet.md)
   * [NuGet clear cache](./development/nuget-clear-cache.md)
   * [NuGet configure global package source with credentials](./development/nuget-configure-global-package-source-with-credentials.md)
+  * [Postman](./development/postman.md)
   * [Problem JSON](./development/problem-json.md)
   * [Run tests in parallel](./development/run-tests-in-parallel.md)
   * [SpecFlow Practices, Tips & Tricks](./development/specflow-practices-tips-and-tricks.md)
