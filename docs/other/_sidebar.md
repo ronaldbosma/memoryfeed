@@ -11,3 +11,5 @@
   * [Chocolatey](./other/chocolatey.md)
   * [Remove all user folders from This PC](./other/remove-all-user-folders-from-this-pc-64-bit.md)
   * [Test ideeën](./other/test-ideeen.md)
+  
+* [Test](./test/)
