@@ -1,4 +1,4 @@
-# Unregister agent from Azure Devops environment
+# Azure DevOps - Unregister agent from environment
 
 Here's some code to automatically unregister all agents on a server from the correspondending Azure DevOps environment. See the end of the article on how to call this code with Azure CLI from e.g. a YAML pipeline.
 
