@@ -11,6 +11,7 @@
   * [Generated files in .NET Core project](./build-and-release/generated-files-in-net-core-project.md)
   * [NuGet build and release pipeline](./build-and-release/nuget-build-and-release-pipeline.md)
   * [SonarQube in Azure](./build-and-release/sonarqube-in-azure.md)
+  * [Unregister agent from Azure Devops environment](unregister-agent-from-azure-devops-enviroment.md)
 
 * [Development](./development/)
 
