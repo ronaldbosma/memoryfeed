@@ -7,6 +7,8 @@ Add the following to the .gitconfig in your user folder: `%userprofile%\.gitconf
 	tool = winmerge
 [difftool "winmerge"]
 	cmd = \"C:\\Program Files\\WinMerge\\WinMergeU.exe\" -e \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = winmerge
 [mergetool "winmerge"]
 	cmd = \"C:\\Program Files\\WinMerge\\WinMergeU.exe\" \"$MERGED\"
 ```
