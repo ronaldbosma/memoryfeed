@@ -7,6 +7,7 @@
 * [Development](./development/)
   * [Entity Framework PowerShell Commands](./development/entity-framework-powershell-commands.md)
   * [Git cheatsheet](./development/git-cheatsheet.md)
+  * [Git - Configure WinMerge as diff and merge tool](./development/git-configure-winmerge-for-diff-and-merge.md)
   * [NuGet clear cache](./development/nuget-clear-cache.md)
   * [NuGet configure global package source with credentials](./development/nuget-configure-global-package-source-with-credentials.md)
   * [Problem JSON](./development/problem-json.md)
@@ -14,7 +15,6 @@
   * [SpecFlow Practices, Tips & Tricks](./development/specflow-practices-tips-and-tricks.md)
   * [SQL Server](./development/sql-server.md)
   * [VS add start window button to toolbar](./development/visual-studio-add-start-window-button-to-toolbar.md)
-  * [VS add WinMerge with git](./development/visual-studio-add-winmerge-with-git.md)
 
 * [Other](./other/)
 

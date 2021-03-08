@@ -1,4 +1,4 @@
-# Setup WinMerge in Visual Studio 2019 with Git
+# Git - Configure WinMerge as diff and merge tool
 
 Add the following to the .gitconfig in your user folder: `%userprofile%\.gitconfig`.
 
