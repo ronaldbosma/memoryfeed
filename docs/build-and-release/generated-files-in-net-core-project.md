@@ -20,7 +20,7 @@ If you generate files in a .NET Core (SDK) project, like service agents, the fir
 </Project>
 ```
 
-Note that a wildcard like `Genenrated/*.cs` does not work.
+Note that a wildcard like `Generated/*.cs` does not work.
 
 
 Comment from https://github.com/dotnet/sdk/issues/1593:
