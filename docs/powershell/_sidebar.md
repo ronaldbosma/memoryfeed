@@ -8,7 +8,7 @@
 
 * [Other](./other/)
 
-* [PowerShell](./powershell)
+* [PowerShell](./powershell/)
   * [Run Scheduled Task](./powershell/run-scheduled-task.md)
 
 * [Test](./test/)

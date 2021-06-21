@@ -8,7 +8,7 @@
 
 * [Other](./other/)
 
-* [PowerShell](./powershell)
+* [PowerShell](./powershell/)
 
 * [Test](./test/)
   * [Postman](./test/postman.md)

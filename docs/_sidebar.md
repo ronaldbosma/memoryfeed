@@ -5,5 +5,5 @@
 * [Build and Release](./build-and-release/)
 * [Development](./development/)
 * [Other](./other/)
-* [PowerShell](./powershell)
+* [PowerShell](./powershell/)
 * [Test](./test/)
