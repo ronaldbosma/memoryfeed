@@ -19,4 +19,6 @@
 
 * [Other](./other/)
 
+* [PowerShell](./powershell)
+
 * [Test](./test/)
