@@ -10,5 +10,6 @@
 
 * [PowerShell](./powershell/)
   * [Run Scheduled Task](./powershell/run-scheduled-task.md)
+  * [Set Tab Title](./powershell/set-tab-title.md)
 
 * [Test](./test/)
