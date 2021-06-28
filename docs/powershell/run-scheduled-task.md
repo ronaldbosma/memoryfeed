@@ -14,12 +14,17 @@ param(
 $task = Get-ScheduledTask $taskName
 $sleepIntervalInSeconds = 1
 
-Write-Host "Start $taskName (Current state: $($task.State))"
 
-
-# Start the task
-$task | Start-ScheduledTask
-
+if ($task.State -ne "Running")
+{
+	Write-Host "Start $taskName (Current state: $($task.State))"
+	# Start the task
+	$task | Start-ScheduledTask
+}
+else
+{
+	Write-Host "Task $taskName is already running (Current state: $($task.State))"
+}
 
 # Wait for the task to complete
 $task = Get-ScheduledTask $taskName
