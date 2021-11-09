@@ -18,6 +18,7 @@
   * [SpecFlow Practices, Tips & Tricks](./development/specflow-practices-tips-and-tricks.md)
   * [SQL Server](./development/sql-server.md)
   * [VS add start window button to toolbar](./development/visual-studio-add-start-window-button-to-toolbar.md)
+  * [WCF](./development/wcf.md)
 
 * [Other](./other/)
 
