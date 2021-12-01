@@ -11,6 +11,7 @@
   * [Git cheatsheet](./development/git-cheatsheet.md)
   * [Git - Configure WinMerge as diff and merge tool](./development/git-configure-winmerge-for-diff-and-merge.md)
   * [IIS - Local website with hostname](./development/iis-local-website-with-hostname.md)
+  * [MSTest V2](./development/mstest-v2.md)
   * [NuGet clear cache](./development/nuget-clear-cache.md)
   * [NuGet configure global package source with credentials](./development/nuget-configure-global-package-source-with-credentials.md)
   * [Problem JSON](./development/problem-json.md)
