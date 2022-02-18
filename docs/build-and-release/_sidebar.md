@@ -12,7 +12,7 @@
   * [Exclude project from code coverage in SonarQube](./build-and-release/exclude-project-from-code-coverage-in-sonarqube.md)
   * [Generated files in .NET Core project](./build-and-release/generated-files-in-net-core-project.md)
   * [NuGet build and release pipeline](./build-and-release/nuget-build-and-release-pipeline.md)
-  * [SonarQube in Azure](./build-and-release/sonarqube-in-azure.md)
+  * [SonarQube](./build-and-release/sonarqube.md)
 
 * [Development](./development/)
 
