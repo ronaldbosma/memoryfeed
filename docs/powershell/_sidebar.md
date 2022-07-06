@@ -12,6 +12,7 @@
   * [Base64 Conversion](./powershell/base64-conversion.md)
   * [Count number of lines in files](./powershell/count-number-of-lines-in-files.md)
   * [Execute SQL scripts in folder](./powershell/execute-sql-scripts-in-folder.md)
+  * [Files and Folders](./powershell/files-and-folders.md)
   * [Output to Console and File](./powershell/output-to-console-and-file.md)
   * [Run Scheduled Task](./powershell/run-scheduled-task.md)
   * [Set Tab Title](./powershell/set-tab-title.md)
