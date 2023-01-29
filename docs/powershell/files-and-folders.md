@@ -42,7 +42,7 @@ foreach ($selectedFile in $selectedFiles) {
 
 ## Update multiple files
 
-This function can be used to update multiple files that match the filter cirtiera with new content.
+This function can be used to update multiple files that match the filter criteria with new content.
 
 ```powershell
 <#
