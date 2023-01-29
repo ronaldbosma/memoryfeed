@@ -137,6 +137,7 @@ function Update-FileContent
             $lines.Add($newContent) | Out-Null
         }
 
+        # New content should be added before and/or after a specific line
         if (-not([string]::IsNullOrEmpty($BeforeLine)) -or -not([string]::IsNullOrEmpty($AfterLine)))
         {
             $offset = 1;
@@ -148,14 +149,14 @@ function Update-FileContent
                 # Add new content before the current line
                 if (-not([string]::IsNullOrEmpty($BeforeLine)) -and $lines[$i] -eq $BeforeLine) {
                     $newLines.Insert($i+$offset-1, $NewContent)
-                    #Increase offset so new lines are inserted in the correct position for multiple matches
+                    #Increase offset so new lines are inserted in the correct position when there are multiple matches
                     $offset++
                 }
 
                 # Add new content after the current line
                 if (-not([string]::IsNullOrEmpty($AfterLine)) -and $lines[$i] -eq $AfterLine) {
                     $newLines.Insert($i+$offset, $NewContent)
-                    #Increase offset so new lines are inserted in the correct position for multiple matches
+                    #Increase offset so new lines are inserted in the correct position when there are multiple matches
                     $offset++
                 }
             }
