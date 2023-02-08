@@ -11,8 +11,10 @@ Source: https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-se
 
 1. Install Windows Terminal from Store
 2. Install a Powerline font like
-    - Meslo (https://github.com/ryanoasis/nerd-fonts / https://github.com/powerline/fonts)
-    - Cascadia Code PL or Cascadia Mono PL (https://github.com/microsoft/cascadia-code)
+    - Meslo - Meslo LG M DZ Regular Nerd Font Complete Mono (Windows Compatible)  
+      https://github.com/ryanoasis/nerd-fonts/releases
+    - Cascadia Code PL or Cascadia Mono PL  
+      https://github.com/microsoft/cascadia-code
 3. Install the posh-git and oh-my-posh-git PowerShell modules
     ```powershell
     Install-Module posh-git -Scope CurrentUser
@@ -26,9 +28,12 @@ Source: https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-se
     ```
 5. Configure a Powerline font for PowerShell or as the default in the Windows Terminal settings
     ```json
-    "defaults":
+    "defaults": 
     {
-        "fontFace": "MesloLGMDZ Nerd Font Mono",
-        "fontSize": 11
+        "font": 
+        {
+            "face": "MesloLGMDZ Nerd Font Mono",
+            "size": 11
+        }
     },
     ```
