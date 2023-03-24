@@ -13,7 +13,7 @@ Source: https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-se
 1. Install oh-my-posh from the Microsoft Store
 
 1. Install a Powerline font like
-    - Meslo - Meslo LG M DZ Regular Nerd Font Complete Mono (Windows Compatible)  
+    - Meslo - Meslo LG M DZ Regular Nerd Font Complete Mono
       https://github.com/ryanoasis/nerd-fonts/releases
     - Cascadia Code PL or Cascadia Mono PL  
       https://github.com/microsoft/cascadia-code
