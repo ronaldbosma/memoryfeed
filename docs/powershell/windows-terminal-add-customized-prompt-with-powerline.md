@@ -37,3 +37,11 @@ Source: https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-se
    ```powershell
    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\avit.omp.json" | Invoke-Expression
    ```
+
+## Visual Studio Code
+
+Follow these steps to configure the font in the integrated VS Code terminal:
+
+1. Open: File > Preferences > Settings
+1. Search for `terminal.integrated.fontFamily`
+1. Set `MesloLGMDZ Nerd Font Mono` as the font family
