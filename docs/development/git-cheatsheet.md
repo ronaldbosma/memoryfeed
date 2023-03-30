@@ -50,5 +50,20 @@ Use command without `--dry-run` to actually remove the untracked files
 ### Cleanup unnecessary files and optimize the local repository
 `git gc`
 
-### Set email address
+### List and set username and email
+
+With `git config --list` the full config can be listed.
+
+With the following commands you can list and set the user.name and user.email for a repository.
+
+```
+git config user.name
+git config user.email
+
+git config user.name "Your Name"
+git config user.email "email@example.com"
+```
+
+### Set global email address
 `git config --global user.email "email@example.com"`
+
