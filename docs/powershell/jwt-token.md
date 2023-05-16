@@ -57,3 +57,5 @@ function ConvertFrom-JWTtoken
     return $tokobj
 }
 ```
+
+_Source: https://www.michev.info/blog/post/2140/decode-jwt-access-and-id-tokens-via-powershell_
