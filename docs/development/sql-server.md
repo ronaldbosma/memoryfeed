@@ -22,7 +22,7 @@ https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?vie
 Get SQL Server container image
 	
 ```
-docker pull mcr.microsoft.com/mssql/server:2019-latest
+docker pull mcr.microsoft.com/mssql/server:2022-latest
 ```
 
 
@@ -32,7 +32,7 @@ Start SQL Server container
 ```
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Welkom12345!" `
     -p 14333:1433 --name sql1 -h sql1 `
-    -d mcr.microsoft.com/mssql/server:2019-latest
+    -d mcr.microsoft.com/mssql/server:2022-latest
 ```
    
 
@@ -51,5 +51,5 @@ docker exec -it sql1 "bash"
 
 Connect to SQL Server from outside container
 ```
-sqlcmd -S 192.168.2.37,14333 -U SA -P "Welkom123456789!"
+sqlcmd -S 127.0.0.1,14333 -U SA -P "Welkom123456789!"
 ```
