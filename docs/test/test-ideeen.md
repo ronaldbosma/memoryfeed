@@ -15,5 +15,8 @@ Addresses:
 Input:
 - Empty / whitespaces
 - Leading and trailing spaces/new lines
-- Special characters like `- ' & , < >`
+- Special characters like `- ' & , < > "`, tabs, new lines, etc.
 - Email addresses with a + in the name
+
+Other
+- Test expiration of session (x time inactivity in a UI). Should session be closed or renewed?
