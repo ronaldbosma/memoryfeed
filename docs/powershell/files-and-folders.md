@@ -14,11 +14,12 @@ Finds files with the name `the-file.jpg` in the current folder & subfolders and 
 Get-ChildItem -Include "the-file.jpg" -Recurse | %{ Copy-Item -Path "C:\Temp\new.jpg" -Destination $_.FullName -Force }
 ```
 
-If the source file is in the current folder or a subfolder, you'll get an error that it can't overwrite itself. To prevent this, use the following script:
+If the source file is in the current folder or a subfolder, you'll get an error that it can't overwrite itself. To prevent this, use the following script. Note that it uses the file name of the source file as the filter to select the files to replace.
 
 ```powershell
 $sourceFilePath = "C:\Temp\new.jpg"
-Get-ChildItem -Include "the-file.jpg" -Recurse | Where-Object { $_.FullName -ne $sourceFilePath } | %{ Copy-Item -Path $sourceFilePath -Destination $_.FullName -Force }
+$targetFileName = (Get-Item -Path $sourceFilePath).Name
+Get-ChildItem -Include $targetFileName -Recurse | Where-Object { $_.FullName -ne $sourceFilePath } | %{ Copy-Item -Path $sourceFilePath -Destination $_.FullName -Force }
 ```
 
 ## Copy files matching filter (include source folder structure)
