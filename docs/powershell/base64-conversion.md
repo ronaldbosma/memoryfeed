@@ -17,3 +17,14 @@ function ConvertFrom-Base64($encodedText)
     return $decodedText
 }
 ```
+
+## Convert base64 to file
+
+The sample below loads the `base64-input.txt` file containing a base64 string and save it as a `.pdf` file.
+
+```powershell
+$base64 = Get-Content ./base64-input.txt
+$bytes = [Convert]::FromBase64String($base64)
+# WriteAllBytes requires absolute path, will fail silently otherwise
+[IO.File]::WriteAllBytes("$pwd/$(Get-Date -Format "yyyyMMdd-HHmmss").pdf", $bytes)
+```
