@@ -6,6 +6,12 @@
 Get-ChildItem -Include "<folder-name>" -Directory -Recurse | Remove-Item -Force -Recurse -Confirm:$false
 ```
 
+## Remove files with specific name that are in a specific folder
+
+```powershell
+Get-ChildItem -Include "<file-name>" -Recurse | Where-Object { $_.Directory.Name -eq "<parent-folder-name>" }  | %{ Remove-Item -Path $_.FullName -Force }
+```
+
 ## Replace files that have specific name
 
 Finds files with the name `the-file.jpg` in the current folder & subfolders and replaces it with `C:\Temp\new.jpg`.
