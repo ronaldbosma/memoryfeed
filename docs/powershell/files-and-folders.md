@@ -50,7 +50,10 @@ foreach ($selectedFile in $selectedFiles) {
 
 ## Update multiple files
 
-This function can be used to update multiple files that match the filter criteria with new content.
+This function can be used to update multiple files that match the filter criteria. It can:
+- add new content at the top or bottom of the file
+- add new content before or after a specific line
+- replace old content with new content
 
 ```powershell
 <#
@@ -71,6 +74,10 @@ This function can be used to update multiple files that match the filter criteri
     .EXAMPLE
         Add the 'using System.Linq;' line after the 'using System;' line in every Program.cs.
         PS C:\> Update-FileContent -Path "C:\repos\foo" -Filter "Program.cs" -NewContent "using System.Linq;" -AfterLine "using System;"
+
+    .EXAMPLE
+        Replace the text 'Foo' with 'Bar' in every Program.cs.
+        PS C:\> Update-FileContent -Path "C:\repos\foo" -Filter "Program.cs" -OldContent "Foo" -NewContent "Bar"
 #>
 function Update-FileContent
 {
@@ -120,7 +127,13 @@ function Update-FileContent
 
         # When specified, new content is added after lines that exactly match this value.
         [Parameter()]
-        [string]$AfterLine = $null
+        [string]$AfterLine = $null,
+
+        # When specified, the old content is replace by the new content. 
+        # - The @"..."@ syntax can be used to specify multi-line content.
+        # - The @'...'@ syntax can be used to specify multi-line content that has characters like ".
+        [Parameter()]
+        [string]$OldContent = $null
     )
 
     $files = Get-ChildItem -Path $Path -Filter $Filter -Include $Include -Exclude $Exclude -File -Recurse
@@ -137,10 +150,12 @@ function Update-FileContent
         $content = Get-Content -Path $file.FullName
         $lines = New-Object System.Collections.ArrayList(,$content)
 
+        # Add new content at the top of the file
         if ($AtTop) {
             $lines.Insert(0, $newContent)
         }
 
+        # Add new content at the bottom of the file
         if ($AtBottom) {
             $lines.Add($newContent) | Out-Null
         }
@@ -171,8 +186,22 @@ function Update-FileContent
 
             $lines = $newLines
         }
-        
+
         Set-Content -Path $file.FullName -Value $lines
+
+        # Old content should be replaced by new content
+        if (-not([string]::IsNullOrEmpty($OldContent)))
+        {
+            # Reload the (already changed) file content. The -Raw parameter is necessary for the regex replace to work correctly.
+            $rawContent = Get-Content -Path $file.FullName -Raw
+
+            # Escape the old content to make sure it's treated as a literal string
+            $escapedOldContent = [regex]::Escape($OldContent)
+            # Replace the old content with the new content
+            $result = $rawContent -replace $escapedOldContent, $NewContent
+
+            Set-Content -Path $file.FullName -Value $result
+        }
     }
 }
 ```
