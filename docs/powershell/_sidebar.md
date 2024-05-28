@@ -9,6 +9,7 @@
 * [Other](./other/)
 
 * [PowerShell](./powershell/)
+  * [App Insights](./powershell/app-insights.md)
   * [Base64 Conversion](./powershell/base64-conversion.md)
   * [Count number of lines in files](./powershell/count-number-of-lines-in-files.md)
   * [Date & Time](./powershell/date-time.md)
