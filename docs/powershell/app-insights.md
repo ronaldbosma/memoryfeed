@@ -1,6 +1,6 @@
 # Application Insights
 
-You can use the following PowerShell script to send a custom event file to Application Insights. This can be useful when troubleshooting or monitoring your application.
+You can use the following PowerShell script to send a custom event to Application Insights. This can be useful when troubleshooting or monitoring your application.
 
 ```powershell
 $instrumentationKey = "..."
