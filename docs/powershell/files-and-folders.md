@@ -1,5 +1,14 @@
 # Files and Folders
 
+## Table of Contents
+
+- [Remove all folders with specific name](#remove-all-folders-with-specific-name)
+- [Remove files with specific name that are in a specific folder](#remove-files-with-specific-name-that-are-in-a-specific-folder)
+- [Replace files that have specific name](#replace-files-that-have-specific-name)
+- [Copy files matching filter (include source folder structure)](#copy-files-matching-filter-include-source-folder-structure)
+- [Update multiple files](#update-multiple-files)
+- [Git move multiple files with same name](#git-move-multiple-files-with-same-name)
+
 ## Remove all folders with specific name
 
 ```powershell
@@ -210,4 +219,16 @@ function Update-FileContent
         }
     }
 }
+```
+
+
+## Git move multiple files with same name
+
+You can use the following script to perform a git move on multiple files with the same name to a new name.
+
+```powershell
+$sourceFile = "specflow.json"
+$targetFile = "reqnroll.json"
+
+Get-ChildItem -Include $sourceFile -Recurse | %{ git mv $_.FullName "$(Join-Path $_.DirectoryName $targetFile)" }
 ```
