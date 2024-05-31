@@ -8,6 +8,7 @@
 - [Copy files matching filter (include source folder structure)](#copy-files-matching-filter-include-source-folder-structure)
 - [Update multiple files](#update-multiple-files)
 - [Git move multiple files with same name](#git-move-multiple-files-with-same-name)
+- [Replace string in filename](#replace-string-in-filename)
 
 ## Remove all folders with specific name
 
@@ -231,4 +232,22 @@ $sourceFile = "specflow.json"
 $targetFile = "reqnroll.json"
 
 Get-ChildItem -Include $sourceFile -Recurse | %{ git mv $_.FullName "$(Join-Path $_.DirectoryName $targetFile)" }
+```
+
+
+## Replace string in filename
+
+Use the following script if you want to replace a specific term in the filename of multiple files. E.g. replace `specflow` with `reqnroll`.
+
+```powershell
+$sourceTerm = "specflow"
+$targetTerm = "reqnroll"
+
+$files = Get-ChildItem -Path "C:\temp" -Include "*$sourceTerm*" -Recurse
+
+foreach ($file in $files) {
+    $newName = $file.Name -replace $sourceTerm, $targetTerm
+    $newPath = Join-Path -Path $file.DirectoryName -ChildPath $newName
+    Move-Item -Path $file.FullName -Destination $newPath
+}
 ```
