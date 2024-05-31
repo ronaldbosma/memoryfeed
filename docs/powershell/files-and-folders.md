@@ -40,7 +40,7 @@ Get-ChildItem -Include $targetFileName -Recurse | Where-Object { $_.FullName -ne
 ## Copy files matching filter (include source folder structure)
 
 This script selects all files in the source folder and subfolders matching the specified filter. 
-It will copy the files to the target folder, recreating the subfolder structur if applicable.
+It will copy the files to the target folder, recreating the subfolder structure if applicable.
 
 ```powershell
 $sourceFolder = "C:\temp\source"
