@@ -1,8 +1,10 @@
 # Permanently remove soft-deleted Log Analytics Workspaces
 
 Here's a script to list all soft-deleted Log Analytics workspaces in your Azure subscription and permanently delete them. 
+It will ask for confirmation before proceeding with the deletion.
+
 Permanently deleting a workspace is only possible if the workspace is not in the soft-deleted state.
-So, this script first recovers the workspace by creating the resource group if it doesn't exists and then recovering the workspace.
+So, this script first recovers the workspace by creating the resource group (if it doesn't exists) and then recovering the workspace.
 After permanently deleting the workspace, it will delete the resource group if it was created by this script.
 
 ```pwsh
@@ -10,7 +12,6 @@ After permanently deleting the workspace, it will delete the resource group if i
 $deletedWorkspaces = az monitor log-analytics workspace list-deleted-workspaces `
     --query "[].{name:name, resourceGroup:resourceGroup, location:location}" `
     --output json | ConvertFrom-Json
-
 
 # List all found workspaces and ask for confirmation
 Write-Output "The following soft-deleted workspaces were found:"
