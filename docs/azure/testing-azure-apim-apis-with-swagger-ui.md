@@ -33,8 +33,8 @@ See the following example for a client credential flow with Entra ID.
 }
 ```
 
-If you have an app registration that's used for server to server communication, retrieving the token will most likely fail. 
-You might see a failure in the sign-in logs of the client app registrations service principal (enterprise application) with the following details:
+If you have an Entra ID app registration that's used for server to server communication, retrieving the token will most likely fail. 
+You might see a failure in the sign-in logs of the client app registration's service principal (enterprise application) with the following details:
 - Failure reason:  
   Cross-origin token redemption is permitted only for the 'Single-Page Application' client-type. Request origin: '{origin}'.
 - Additional details:  
@@ -46,7 +46,7 @@ See https://stackoverflow.com/questions/78200733/aadsts9002326-cross-origin-toke
 
 As an alternative, you could configure a bearer security scheme so the user can configure the bearer JWT token. 
 See the snippet below. 
-The user will has to retrieve the access token another way. E.g. via Postman or an HTTP file.
+The user has to retrieve the access token another way. E.g. via Postman or an HTTP file.
 
 ```json
 "components": {
