@@ -2,6 +2,7 @@
 
 * [Home](/)
 
+* [Azure](./azure/)
 * [Build and Release](./build-and-release/)
 * [Development](./development/)
 * [Other](./other/)

@@ -2,6 +2,8 @@
 
 * [Home](/)
 
+* [Azure](./azure/)
+
 * [Build and Release](./build-and-release/)
   * [Azure DevOps Build Server Issues](./build-and-release/azure-devops-build-server-issues.md)
   * [Azure DevOps CLI](./build-and-release/azure-devops-cli.md)
