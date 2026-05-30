@@ -37,6 +37,20 @@ When cloning `https://gitlab.com/username/myrepo.git` with a token, use:
 `git clone https://<token-name>:<token>@gitlab.com/username/myrepo.git`
 
 
+### Rebase
+
+Rebase and push, when the branch is already on remote server:
+
+```pwsh
+git rebase main
+
+# Shows commits on your branch that are not in main
+git log --oneline --graph --decorate origin/main..HEAD
+
+git push --force-with-lease origin <branch>
+```
+
+
 ### Submodules
 
 #### Clone repository with submodules
